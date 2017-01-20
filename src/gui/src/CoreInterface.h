@@ -28,6 +28,7 @@ public:
 	QString getInstalledDir();
 	QString getArch();
 	QString getSerialKeyFilePath();
+	QString loginAuth(const QString& credentials);
 	QString notifyActivation(const QString& identity);
 	QString notifyUpdate (QString const& fromVersion,
 						   QString const& toVersion,

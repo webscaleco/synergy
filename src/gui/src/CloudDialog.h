@@ -15,6 +15,9 @@ public:
 	CloudDialog(QWidget *parent = 0);
 	~CloudDialog();
 
+private:
+	QString hash(const QString& string);
+
 private slots:
 	void on_m_pLoginButton_clicked();
 

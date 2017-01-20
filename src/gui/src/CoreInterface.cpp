@@ -62,6 +62,12 @@ QString CoreInterface::getSerialKeyFilePath()
 	return filename;
 }
 
+QString CoreInterface::loginAuth(const QString& credentials)
+{
+	QStringList args("--login-auth");
+	return run(args, credentials);
+}
+
 QString CoreInterface::notifyUpdate (QString const& fromVersion,
 									  QString const& toVersion,
 									  QString const& serialKey) {
