@@ -295,6 +295,8 @@ void MainWindow::createMenuBar()
 	m_pMenuFile->addSeparator();
 	m_pMenuFile->addAction(m_pActionSave);
 	m_pMenuFile->addSeparator();
+	m_pMenuFile->addAction(m_pActionUseCloud);
+	m_pMenuFile->addSeparator();
 	m_pMenuFile->addAction(m_pActionQuit);
 	m_pMenuEdit->addAction(m_pActionSettings);
 	m_pMenuWindow->addAction(m_pActionMinimize);
@@ -1460,4 +1462,11 @@ QString MainWindow::getProfileRootForArg()
 #endif
 
 	return QString("\"%1\"").arg(dir);
+}
+
+void MainWindow::on_m_pActionUseCloud_triggered()
+{
+	QMessageBox::information(
+		this, "Synergy",
+		tr("Cloud solution!"));
 }

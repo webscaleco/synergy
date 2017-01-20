@@ -142,6 +142,7 @@ public slots:
 		void on_m_pActionAbout_triggered();
 		void on_m_pActionSettings_triggered();
 		void on_m_pActivate_triggered();
+		void on_m_pActionUseCloud_triggered();
 		void synergyFinished(int exitCode, QProcess::ExitStatus);
 		void trayActivated(QSystemTrayIcon::ActivationReason reason);
 		void stopSynergy();

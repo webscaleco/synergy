@@ -48,7 +48,7 @@
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="Synergy.qrc">:/res/icons/16x16/warning.png</pixmap>
+          <pixmap>:/res/icons/16x16/warning.png</pixmap>
          </property>
         </widget>
        </item>
@@ -99,7 +99,7 @@
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="Synergy.qrc">:/res/icons/16x16/warning.png</pixmap>
+          <pixmap>:/res/icons/16x16/warning.png</pixmap>
          </property>
         </widget>
        </item>
@@ -391,7 +391,7 @@
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap resource="Synergy.qrc">:/res/icons/16x16/padlock.png</pixmap>
+         <pixmap>:/res/icons/16x16/padlock.png</pixmap>
         </property>
        </widget>
       </item>
@@ -540,10 +540,16 @@
     <string>Activate</string>
    </property>
   </action>
+  <action name="m_pActionUseCloud">
+   <property name="text">
+    <string>Use cloud</string>
+   </property>
+   <property name="toolTip">
+    <string>Login to use cloud solution</string>
+   </property>
+  </action>
  </widget>
- <resources>
-  <include location="Synergy.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>m_pRadioExternalConfig</sender>
