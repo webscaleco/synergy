@@ -35,6 +35,7 @@
 #include "QUtility.h"
 #include "ProcessorArch.h"
 #include "SslCertificate.h"
+#include "CloudDialog.h"
 
 #include <QtCore>
 #include <QtGui>
@@ -1466,7 +1467,6 @@ QString MainWindow::getProfileRootForArg()
 
 void MainWindow::on_m_pActionUseCloud_triggered()
 {
-	QMessageBox::information(
-		this, "Synergy",
-		tr("Cloud solution!"));
+	CloudDialog cd(this);
+	int result = cd.exec();
 }
