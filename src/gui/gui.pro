@@ -142,6 +142,6 @@ win32 {
     Release:DESTDIR = ../../bin/Release
     LIBS += -L"../../ext/bonjour/x64" \
         -ldnssd
-    INCLUDEPATH += "$(BONJOUR_SDK_HOME)/Include"
+    INCLUDEPATH += "C:/Program Files/Bonjour SDK/Include"
 }
 else:DESTDIR = ../../bin

@@ -765,7 +765,7 @@ QString MainWindow::configFilename()
 
 QString MainWindow::address()
 {
-	QString i = appConfig().interface();
+	QString i = appConfig().getInterface();
 	return (!i.isEmpty() ? i : "") + ":" + QString::number(appConfig().port());
 }
 
@@ -1346,47 +1346,6 @@ void MainWindow::downloadBonjour()
 
 void MainWindow::installBonjour()
 {
-#if defined(Q_OS_WIN)
-	QString tempLocation = QDesktopServices::storageLocation(
-								QDesktopServices::TempLocation);
-	QString filename = tempLocation;
-	filename.append("\\").append(bonjourTargetFilename);
-	QFile file(filename);
-	if (!file.open(QIODevice::WriteOnly)) {
-		m_DownloadMessageBox->hide();
-
-		QMessageBox::warning(
-			this, "Synergy",
-			tr("Failed to download Bonjour installer to location: %1")
-			.arg(tempLocation));
-		return;
-	}
-
-	file.write(m_pDataDownloader->data());
-	file.close();
-
-	QStringList arguments;
-	arguments.append("/i");
-	QString winFilename = QDir::toNativeSeparators(filename);
-	arguments.append(winFilename);
-	arguments.append("/passive");
-	if (m_BonjourInstall == NULL) {
-		m_BonjourInstall = new CommandProcess("msiexec", arguments);
-	}
-
-	QThread* thread = new QThread;
-	connect(m_BonjourInstall, SIGNAL(finished()), this,
-		SLOT(bonjourInstallFinished()));
-	connect(m_BonjourInstall, SIGNAL(finished()), thread, SLOT(quit()));
-	connect(thread, SIGNAL(finished()), thread, SLOT(deleteLater()));
-
-	m_BonjourInstall->moveToThread(thread);
-	thread->start();
-
-	QMetaObject::invokeMethod(m_BonjourInstall, "run", Qt::QueuedConnection);
-
-	m_DownloadMessageBox->hide();
-#endif
 }
 
 void MainWindow::promptAutoConfig()
