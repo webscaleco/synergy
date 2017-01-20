@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>CloutDialog</class>
- <widget class="QDialog" name="CloutDialog">
+ <class>CloudDialog</class>
+ <widget class="QDialog" name="CloudDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>This is a Clout based solution. You need to login to use the service.</string>
+    <string>This is a Cloud based solution. You need to login to use the service.</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>

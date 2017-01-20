@@ -1,10 +1,10 @@
-#ifndef CLOUTDIALOGLOG_H
-#define CLOUTDIALOGLOG_H
+#ifndef CLOUDDIALOGLOG_H
+#define CLOUDDIALOGLOG_H
 
 #include <QDialog>
 
 namespace Ui {
-class CloutDialog;
+class CloudDialog;
 }
 
 class CloudDialog : public QDialog
@@ -16,7 +16,7 @@ public:
 	~CloudDialog();
 
 private:
-	Ui::CloutDialog *ui;
+	Ui::CloudDialog *ui;
 };
 
-#endif // CLOUTDIALOGLOG_H
+#endif // CLOUDDIALOGLOG_H

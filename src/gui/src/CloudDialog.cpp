@@ -1,9 +1,9 @@
 #include "CloudDialog.h"
-#include "ui_CloutDialogBase.h"
+#include "ui_CloudDialogBase.h"
 
 CloudDialog::CloudDialog(QWidget *parent) :
 	QDialog(parent),
-	ui(new Ui::CloutDialog)
+	ui(new Ui::CloudDialog)
 {
 	ui->setupUi(this);
 }
