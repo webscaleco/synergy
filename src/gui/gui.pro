@@ -21,7 +21,6 @@ FORMS += res/MainWindowBase.ui \
     res/ActivationDialog.ui \
     res/CancelActivationDialog.ui \
     res/FailedLoginDialog.ui \
-    res/CloudDialogBase1.ui \
     res/CloudDialogBase.ui
 SOURCES += src/main.cpp \
     src/MainWindow.cpp \
@@ -69,6 +68,7 @@ SOURCES += src/main.cpp \
     src/FailedLoginDialog.cpp \
     ../lib/shared/SerialKey.cpp \
     src/LicenseManager.cpp \
+    src/CloudDialog.cpp
 HEADERS += src/MainWindow.h \
     src/AboutDialog.h \
     src/ServerConfig.h \
