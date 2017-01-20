@@ -12,3 +12,8 @@ CloudDialog::~CloudDialog()
 {
 	delete ui;
 }
+
+void CloudDialog::on_m_pLoginButton_clicked()
+{
+
+}
